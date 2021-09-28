@@ -80,11 +80,11 @@ header nav ul {
 	flex-flow: row wrap;
 }
 header nav ul li {
-	width: 100%;
+	width: 100%;               /*set width 100% so that each items will be vertically aligned*/
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 0.875em;
-	padding: 10px 10px;
+	padding: 10px;
 	display: flex;
 	justify-content: center;
 }
@@ -174,4 +174,62 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 1.16em;
+}
+
+/***** Media queries for full responsive site *****/
+
+@media all and (min-width: 768px) {
+	/* Tablet style here */
+	.section-one,
+	.section-two,
+	.section-three {
+		width: 33%;
+		height: auto;
+		border-top: 1px solid #eee;
+	}
+
+	.section-one {
+		padding: 0 20px 0 0;
+		box-sizing: border-box;
+	}
+
+	.section-two {
+		padding: 0 20px;
+		border-right: 1px solid #eee;
+		border-left: 1px solid #eee;
+		box-sizing: border-box;
+	}
+
+	.section-three {
+		padding: 0 0 0 20px;
+		box-sizing: border-box;
+	}
+}
+
+@media all and (min-width: 1200px) {
+	/* Desktop style here */
+	header {
+		flex-wrap: nowrap;
+	}
+
+	header h1 {
+		width: 60%;
+		text-align: left;
+		border-bottom: none;
+	}
+	
+	header nav {
+		width: 40%;
+		padding: 0;
+	}
+
+	header nav ul {
+		justify-content: space-between;  
+		flex-wrap: nowrap;
+	}
+
+	header nav ul li {
+		width: auto;
+		padding: 0;
+	}
 }
